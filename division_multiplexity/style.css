@@ -1,0 +1,543 @@
+body {
+    /* position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF; 
+    padding: 50px; */
+    position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    padding: 50px;
+    padding-top: 75px; /* Adjusted to add space for the fixed header */
+}
+
+    /* margin: 1in; */
+
+.header {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    height: 100px;
+    color:#202A44; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Changed from relative to fixed */
+    top: 0; /* Added to fix it to the top */
+    width: 88%; /* Added to make the header full width */
+    height: 100px;
+    color: #202A44;
+    z-index: 1000; /* Added to ensure the header is above other content */
+    background-color: #FFFFFF;
+    padding-left: 20px; /* Add 20px padding to the left */
+    padding-right: 20px;
+  
+}
+
+h1 {
+    font-size:28px;
+    position: absolute;
+    top: 15px;
+    
+}
+
+.logo {
+    position: absolute;
+    width: 180px; 
+    height: 100px; 
+    margin: 0;
+    object-fit: contain;
+    left: 20px;
+    top: 0;
+}
+
+.course-info {
+    position: absolute;
+    text-align: right;
+    right: 20px;
+    top: 30px;
+}
+
+#learning-outcome,
+#problem-description,
+#task {
+    min-width: 150px;
+    max-height: 300px;
+}
+
+.content-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    color:#202A44;
+    font-size: 24px;
+    
+    
+}
+
+.content-box {
+    width: 100%;
+    background-color: #202A44; 
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px; 
+    margin-top: 10px;
+    color:#FFFFFF;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.scroll-section {
+
+    overflow-y: auto; 
+    overflow-x: hidden;
+    background-color: #202A44;
+    white-space: normal;
+    width: 100%;
+    max-height: 300px; 
+    border-radius: 20px;
+    padding:10px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+}
+
+
+        /* Style the content within the container */
+        .scroll-section .content-box {
+            padding-right: 10px; /* Add space for the scrollbar */
+        }
+
+        /* Style the scrollbar (for webkit-based browsers) */
+        .scroll-section::-webkit-scrollbar {
+            width: 5px; /* Width of the scrollbar */
+            border-radius: 40px;
+         
+            height: 5px;
+        }
+
+        /* Style the scrollbar track (for webkit-based browsers) */
+        .scroll-section::-webkit-scrollbar-track {
+            background-color: #f1f1f1; /* Background color of the scrollbar track */
+            border-radius: 40px; /* Rounded corners for the scrollbar track */
+            width: 5px; /* Width of the thumb */
+            height: 5px;
+        }
+
+        /* Style the scrollbar thumb (for webkit-based browsers) */
+        .scroll-section::-webkit-scrollbar-thumb {
+            background-color: #888; /* Color of the scrollbar thumb */
+            border-radius: 40px; /* Rounded corners for the scrollbar thumb */
+            width: 5px; /* Width of the thumb */
+            height: 5px;
+        }
+
+        /* Style the scrollbar thumb when hovering (for webkit-based browsers) */
+        .scroll-section::-webkit-scrollbar-thumb:hover {
+            background-color: #555; /* Color of the scrollbar thumb on hover */
+        }
+
+    .custom-button {
+        min-width: 80px; /* Provide a minimum width to ensure button visibility */
+        height: 40px; /* Adjust the height as per your design */
+        background-color: #FFD700;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        display: inline-block;
+        padding-left: auto; /* Increase left padding */
+        padding-right: 20px; /* Set a fixed right padding */
+        font-size: 16px;
+        font-weight: bold;
+        text-align: right; /* Align text to the right */
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow */
+        z-index: 1;
+        vertical-align: middle;
+        box-sizing: border-box; /* Include padding in the button's total width */
+    }
+
+    .custom-button::before,
+    .custom-button::after {
+        content: "";
+        position: absolute;
+        width:12px; 
+        height: 100%;
+        background-color: white;
+        transform: skew(-45deg);
+        transform-origin: 0 100%;
+        top: 0;
+        z-index: -1;
+        transition: width 0.3s, left 0.3s;
+    }
+
+
+    .custom-button::before {
+        
+        width: 12px; 
+        transform: skew(-45deg);
+        transform-origin: 0 100%;
+        right: 53px;
+    } 
+
+    .custom-button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0; /* Position it at the right edge of the button */
+        width: 22px;
+        height: 0;
+        border-style: solid;
+        border-width: 40px 12px 0 0; /* Creates a triangle with a right angle on the right side */
+        border-color: white transparent transparent transparent; /* The top border is visible as white */
+    }
+    
+
+
+
+.custom-button:hover::before {
+    width: 0;
+    left: 100%; 
+}
+
+.custom-button:hover::after {
+    left: 100%;
+}
+
+
+#explanation {
+    display: none;
+    font: 20px;
+} 
+
+
+#explain-button {
+    cursor: pointer;
+}
+
+
+#explain-button.active {
+    background-color: #FFD700;
+    color: white;
+}
+
+
+.scroll-section#explanation .content-box {
+    border-radius: 10px;
+    background-color: #202A44;
+    padding: 10px;
+}
+
+
+.scroll-section#next-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+
+#next-button {
+    cursor: pointer;
+}
+
+
+#next-button.active {
+    background-color: #FFD700;
+    color: white;
+}
+
+.scroll-section#next-section .content-box {
+    border-radius: 10px;
+    background-color: #FFD700;
+    padding: 10px;
+}
+
+
+.rectangle-container-top-right {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    padding:10px;
+}
+
+
+
+.ui-border-small-top-right {
+
+ 
+    right: 25px; 
+    width: 20px;
+    height: 100px;
+    background-color: #FFD700;
+    z-index: 2;
+}
+
+
+.ui-border-large-top-right {
+   
+    right: 0;
+    width: 20px;
+    height: 200px;
+    background-color: #202A44;
+    z-index: 1;
+}
+.ui-border-small-top-right{
+    position: fixed;
+    top: 0;
+    right: 20px;
+}
+
+.ui-border-large-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+
+.rectangle-container-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.ui-border-small-bottom-left {
+    position: relative;
+    bottom: 0;
+    left: 20px;
+    width: 20px;
+    height: 100px;
+    background-color: #FFD700;
+    z-index: 2;
+}
+
+.ui-border-large-bottom-left {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 200px;
+    background-color: #202A44;
+    z-index: 1;
+}
+.ui-border-small-bottom-left{
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+}
+
+.ui-border-large-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+
+.explanation-heading {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin-top:10px;
+}
+.auto-adjust {
+    width: auto; 
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.bit {
+    width: 20px; 
+    height: 20px; 
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #000; 
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.binary-input {
+    display: flex;
+    flex: 2;
+   
+}
+.input-group {
+    display: inline-block;
+    grid-template-columns: repeat(8, [col-start] 1fr);
+    gap: 20px;
+    width: 1250px;
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.label {
+    width: 500px;
+}
+
+.input-group label {
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+
+
+/* Explanation Box Inside the Modal */
+.modal .content-box {
+    background-color: #FFFFFF; /* White background */
+    color: #202A44; /* Blue text */
+    max-height: 400px; /* Set a maximum height for the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px; /* Add some padding inside the box */
+    border-radius: 20px; /* Optional: Adds rounded corners to the box */
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-height: 400px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    position: absolute; /* Absolute position */
+    right: 80px; /* 20px from the right edge of modal-content */
+    top: 110px; /* Negative value to position it above the modal-content */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #FFFFFF; /* White background */
+    border-radius: 14px; /* Rounded corners for the close button */
+    width: 28px; /* Width of the close button */
+    height: 28px; /* Height of the close button */
+    line-height: 28px; /* Center the 'x' vertically */
+    text-align: center; /* Center the 'x' horizontally */
+    z-index: 1000;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.overall-feedback {
+    /* Your styles for overall feedback */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.correct {
+    color: green;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+}
+    
+.form-group {
+    display: flex;         
+    align-items: center;    
+    margin-bottom: 10px;    
+}
+
+label {
+    flex-basis: 50%; 
+    text-align: left;      
+    padding-right: 20px;    
+} 
+
+input {
+    flex-basis: 20%;       
+    width: 200px;          
+    text-align: left;      
+}
+
+.solid-table {
+    border-collapse: collapse;
+    width: 90%; /* Adjust the width as necessary */
+    margin: 20px 0; /* Space above and below the table */
+    border: 2px solid #FFFFFF; /* White border for the entire table */
+}
+
+.solid-table th,
+.solid-table td {
+    padding: 8px 15px; /* Padding inside cells */
+    text-align: left; /* Left align text inside cells */
+    color: white; /* White text for cells */
+    border: 2px solid #FFFFFF; /* White border for individual cells */
+    background-color: #202A44; /* Dark blue background for cells */
+}
+
+.solid-table th {
+    text-align: center; /* Center align text in header cells */
+}
+
+/* Optional: Style for alternating row colors or striping */
+.solid-table tr:nth-child(even) {
+    background-color: #183152; /* Slightly different blue for even rows */
+}
+
+/* Optional: Hover effect for rows */
+.solid-table tr:hover {
+    background-color: #1a1f33; /* Slightly lighter blue when hovering over rows */
+}
+
+/* Explanation Modal Table Styles */
+.modal .explanation-table th,
+.modal .explanation-table td {
+    border: 1px solid #ffffff; /* White borders for table cells */
+    color: #ffffff; /* White text for cells */
+    padding: 8px; /* Padding inside cells */
+}
+
+.modal .explanation-table th {
+    background-color: #202A44; /* Blue background for headers */
+}
+
+.modal .explanation-table tr {
+    background-color: #202A44; /* Blue background for all rows */
+}
+
+.modal .explanation-table {
+    width: 100%; /* Full width of the modal content */
+    border-collapse: collapse; /* Collapses border */
+}
+.feedback-individual {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+
+.hidden {
+    display: none;
+}
+#explanation {
+   
+    display: none;
+}

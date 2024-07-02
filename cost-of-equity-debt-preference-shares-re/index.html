@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn by Doing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rectangle-container-top-right">
+        <div class="ui-border-large-top-right"></div>
+        <div class="ui-border-small-top-right"></div>
+    </div>
+    <div class="rectangle-container-bottom-left">
+        <div class="ui-border-large-bottom-left"></div>
+        <div class="ui-border-small-bottom-left"></div>
+    </div>
+<div class="header">
+    <img src="assets/jainlogo.png" alt="JAIN University Logo" class="logo">
+    <h1>Learn by Doing</h1>
+    <div class="course-info">
+        <p class="auto-adjust">Accounting and Finance</p> 
+        <p>23VMB0C103 </p> 
+    </div>
+</div>
+<section class="content-section" id="learning-outcome">
+    Learning Outcome
+</section>
+<div class="scroll-section" id="learning-outcome">
+    
+    <div class="content-box">
+    <p>Ability to calculate cost of Equity, cost of preference shares, cost of Debt, cost of Retained earnings, Weighted average cost of capital.</p>
+    </div>
+</div>
+
+<section class="content-section" id="problem-description">
+    Problem Description
+</section>
+<div class="scroll-section" id="problem-description">
+    
+    <div class="content-box">
+        <p id="problemDesc">
+            <!-- Initial problem description will be populated by the JavaScript -->
+        </p>
+        <table id="problemTable" class="solid-table">
+            <!-- Initial table data will be populated by the JavaScript -->
+        </table>
+        
+        
+    </div>
+
+</div>
+
+<section class="content-section" id="tasks">
+    Tasks
+</section>
+<div class="scroll-section" id="tasks">
+    
+    <div class="content-box">
+        
+            <div class="form-group">
+            
+                <label>Enter Cost of Equity (decimal or percentage): </label>
+                    <input type="text" id="costOfEquity"><br><br>
+                    <span id="costOfEquityFeedback" class="feedback-individual"></span>
+            </div>
+            <div class="form-group">
+                <label>Enter Cost of Preference Shares (decimal or percentage): </label>
+                    <input type="text" id="costOfPrefShares"><br><br>
+                    <span id="costOfPreferenceFeedback" class="feedback-individual"></span>
+            </div>
+            <div class="form-group">  
+                <label>Enter Cost of Debt (decimal or percentage):</label> 
+                    <input type="text" id="costOfDebt"><br><br>
+                    <span id="costOfDebtFeedback" class="feedback-individual"></span>
+            </div>
+            <div class="form-group">    
+                <label>Enter Cost of Retained Earnings (decimal or percentage): </label>
+                    <input type="text" id="costOfRetained"><br><br>
+                    <span id="costOfRetainedEarnFeedback" class="feedback-individual"></span>
+            </div>
+            <div class="form-group">
+                <label>Enter Weighted Average Cost of Capital (decimal or percentage): </label>
+                    <input type="text" id="wacc"><br><br>
+                    <span id="costOfwaccFeedback" class="feedback-individual"></span>
+        
+            </div>
+        </div>
+    
+</div>
+    <div class="buttons">
+
+        <button id="btnSubmit" class="custom-button">SUBMIT</button>
+        <button id="btnTryAgain" class="custom-button">TRY AGAIN</button>
+        <button id="btnExplain" class="custom-button">EXPLAIN</button>
+        <button id="btnNext" class="custom-button">NEXT</button>
+        <button class="custom-button" id="exit" onclick="function goBack() { window.history.back(); } goBack();">EXIT</button>
+    </div>
+    <div id="feedback" class="feedback"></div>
+    <div id="overallFeedback" class="overall-feedback"></div>
+    <!-- Explanation Modal Structure -->
+    <div id="explanationModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="explanation-heading">Explanation</div>
+            <div class="content-box" id="explanationContent">
+          
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

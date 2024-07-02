@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn by Doing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rectangle-container-top-right">
+        <div class="ui-border-large-top-right"></div>
+        <div class="ui-border-small-top-right"></div>
+    </div>
+    <div class="rectangle-container-bottom-left">
+        <div class="ui-border-large-bottom-left"></div>
+        <div class="ui-border-small-bottom-left"></div>
+    </div>
+<div class="header">
+    <img src="assets/jainlogo.png" alt="JAIN University Logo" class="logo">
+    <h1>Learn by Doing</h1>
+    <div class="course-info">
+        <p class="auto-adjust">Accounting and Finance</p> 
+        <p>23VMB0C103 </p> 
+    </div>
+</div>
+<section class="content-section" id="learning-outcome">
+    Learning Outcome
+</section>
+<div class="scroll-section" id="learning-outcome">
+    
+    <div class="content-box">
+    <p>Ability to Recommend an Investment based on different methods like Net Present Value, Payback Period, Profitability Index, Discounted Payback Period.</p>
+    </div>
+</div>
+
+<section class="content-section" id="problem-description">
+    Problem Description
+</section>
+<div class="scroll-section" id="problem-description">
+    
+    <div class="content-box">
+        <p>Suhas Instruments Incorporated, a renowned technology company headquartered in Delhi, specializes in designing and manufacturing semiconductors and various integrated circuits, catering to electronics designers and manufacturers worldwide. The company is now evaluating two mutually exclusive projects named Saras and Aaras. Below are the financial details you have been provided to assist in the investment decision-making process:</p>
+
+
+
+        <table id="projectDataTable">
+          <tr>
+            <th>Details</th>
+            <th>Project Saras</th>
+            <th>Project Aaras</th>    
+            <th>PVIF @ 10%</th>
+          </tr>
+          <tr>
+            <td>Project Cost</td>
+            <td class="project-cost-saras">700</td>
+            <td class="project-cost-aaras">700</td>   
+            <td class="pvif-aaras-year-0">1</td>
+          </tr>
+          <tr>
+            <td>Cash inflows year 1:</td>
+            <td class="cash-inflow-saras-year-1">100</td>
+            <td class="cash-inflow-aaras-year-1">500</td>
+            
+            <td class="pvif-aaras-year-1">0.909</td>
+          </tr>
+          <tr>
+            <td>Cash inflows year 2:</td>
+            <td class="cash-inflow-saras-year-2">200</td>
+            <td class="cash-inflow-aaras-year-2">400</td>
+            
+            <td class="pvif-aaras-year-2">0.826</td>
+          </tr>
+          <tr>
+            <td>Cash inflows year 3:</td>
+            <td class="cash-inflow-saras-year-3">300</td>
+            <td class="cash-inflow-aaras-year-3">200</td>
+           
+            <td class="pvif-aaras-year-3">0.751</td>
+          </tr>
+          <tr>
+            <td>Cash inflows year 4:</td>
+            <td class="cash-inflow-saras-year-4">450</td>
+            <td class="cash-inflow-aaras-year-4">100</td>
+           
+            <td class="pvif-aaras-year-4">0.683</td>
+          </tr>
+          <tr>
+            <td>Cash inflows year 5:</td>
+            <td class="cash-inflow-saras-year-5">600</td>
+            <td class="cash-inflow-aaras-year-5">100</td>
+            
+            <td class="pvif-aaras-year-5">0.621</td>
+          </tr>
+        </table>
+        <p>Assume no residual values at the end of the fifth year. The firm’s cost of capital is 10%. Based on the provided information, answer the following questions:</p>
+            <ol>
+            <li>Which project do you recommend for investment based on Net Present value?</li>
+            <li>Which project do you recommend for investment based on Payback Period?</li>
+            <li>Which project do you recommend for investment based on Profitability Index?</li>
+            <li>Which project do you recommend for investment based on Discounted payback period?</li>
+            <li>On the basis of overall analysis which project do you recommend for investment.</li>
+            </ol>
+    </div>        
+
+</div>
+
+<section class="content-section" id="tasks">
+    Tasks
+</section>
+<div class="scroll-section" id="tasks">
+    
+    <div class="content-box">
+
+        <div class="form-group">
+                <!-- Input fields and labels -->
+            <label for="npvSaras">Enter Net present value (Saras):</label>
+            <input type="text" id="npvSaras"><br>
+        </div>
+        <div class="form-group">
+            <label for="npvAaras">Enter Net Present value (Aaras):</label>
+            <input type="text" id="npvAaras"><br>
+        </div>
+        <div class="form-group">
+            <label for="chooseNPV">On the basis of NPV, which project do you choose?</label>
+            <select id="chooseNPV">
+            <option value="">Select Project</option>
+            <option value="Saras">Saras</option>
+            <option value="Aaras">Aaras</option>
+            </select><br><br>
+        </div>
+        <div class="form-group">
+            <label for="ppSaras">Payback period (Saras):</label>
+            <select id="ppSaras">
+            <option value="">Select Year</option>
+            <option value="Y1">Year 1</option>
+            <option value="Y2">Year 2</option>
+            <option value="Y3">Year 3</option>
+            <option value="Y4">Year 4</option>
+            <option value="Y5">Year 5</option>
+            </select><br>
+        </div>
+        <div class="form-group">
+            <label for="ppAaras" class="label">Payback period for Aaras:</label>
+                <select id="ppAaras">
+                    <option value="">Select period</option>
+                    <option value="y1-y2">Between Y1-Y2</option>
+                    <option value="y2-y3">Between Y2-Y3</option>
+                    <option value="y3-y4">Between Y3-Y4</option>
+                    <option value="y4-y5">Between Y4-Y5</option>
+                </select><br>
+            </div>
+            <div class="form-group">
+                <!-- Project Choice Based on Payback Period -->
+                <label for="choosePP" class="label">On the basis of PP, which project do you choose?</label>
+                <select id="choosePP">
+                    <option value="">Select project</option>
+                    <option value="Saras">Saras</option>
+                    <option value="Aaras">Aaras</option>
+                </select>
+            <br><br>
+        </div>
+        <div class="form-group">
+            <label for="piSaras">Enter Profitability Index (Saras):</label>
+            <input type="text" id="piSaras"><br>
+        </div>
+        <div class="form-group">
+            <label for="piAaras">Enter Profitability index (Aaras):</label>
+            <input type="text" id="piAaras"><br>
+        </div>
+        <div class="form-group">
+            <label for="choosePI">On the basis of Profitability Index, which project do you choose?</label>
+            <select id="choosePI">
+            <option value="">Select Project</option>
+            <option value="Saras">Saras</option>
+            <option value="Aaras">Aaras</option>
+            </select><br><br>
+        </div>
+        <div class="form-group">
+            <label for="dpbSaras">Discounted Payback period (Saras):</label>
+            <select id="dpbSaras">
+            <option value="">Select Year</option>
+            <option value="Y1">Year 1</option>
+            <option value="Y2">Year 2</option>
+            <option value="Y3">Year 3</option>
+            <option value="Y4">Year 4</option>
+            <option value="Y5">Year 5</option>
+            </select><br>
+        </div>
+        <div class="form-group">
+            <label for="dpbAaras">Discounted Payback period (Aaras):</label>
+            <select id="dpbAaras">
+            <option value="">Select Year</option>
+            <option value="Y1">Year 1</option>
+            <option value="Y2">Year 2</option>
+            <option value="Y3">Year 3</option>
+            <option value="Y4">Year 4</option>
+            <option value="Y5">Year 5</option>
+            </select><br>
+        </div>
+        <div class="form-group">
+            <label for="chooseDPB" class="label">On the basis of Discounted payback period, which project do you choose?</label>
+                <select id="chooseDPB">
+                    <option value="">Select project</option>
+                    <option value="Saras">Saras</option>
+                    <option value="Aaras">Aaras</option>
+                </select>
+            <br><br>
+        </div>
+        
+    </div>
+</div>
+</div>
+    <div class="buttons">
+
+        <button id="btnSubmit"  class="custom-button">SUBMIT</button>
+        <button id="btnTryAgain" class="custom-button">TRY AGAIN</button>
+        <button id="btnExplain" class="custom-button">EXPLAIN</button>
+        <button id="btnNext" class="custom-button">NEXT</button>
+        <button class="custom-button" id="exit" onclick="function goBack() { window.history.back(); } goBack();">EXIT</button>
+
+    </div>
+    <div  id="feedback" class="feedback"></div>
+    
+    <div class="explanation"></div>
+    
+    <div id="explanationModal" class="modal">
+    
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="explanation-heading">Explanation</div>
+        <div class="content-box"></div>
+    </div>
+    
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
